@@ -13,21 +13,21 @@
         abp.ui.setBusy(
             $('body'),
 
-            //abp.ajax({
-            //    contentType: 'application/x-www-form-urlencoded',
-            //    url: _$form.attr('action'),
-            //    data: _$form.serialize()
-            //})
-
-            $.ajax({
+            abp.ajax({
                 contentType: 'application/x-www-form-urlencoded',
                 url: _$form.attr('action'),
-                data: _$form.serialize(),
-                method: 'post',
-                success: function (data) {
-                    alert(data.result);
-                }
+                data: _$form.serialize()
             })
+
+            //$.ajax({
+            //    contentType: 'application/x-www-form-urlencoded',
+            //    url: _$form.attr('action'),
+            //    data: _$form.serialize(),
+            //    method: 'post',
+            //    success: function (data) {
+            //        alert(data.result);
+            //    }
+            //})
         );
     });
 })();
